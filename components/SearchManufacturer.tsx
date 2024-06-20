@@ -52,10 +52,30 @@ const SearchManufacturer = ({ manufacturer, setManufacturer }: SearchManufacture
                       value={item}
                       className={({ active }) => `
                         relative search-manufacturer__option
-                        ${active ? 'bg-primary-blue text-white' : 'text-gray-900'}
-                      `}
+                        ${active ? 'bg-primary-blue text-white' : 'text-gray-900'
+                        }`
+                      }
                     >
-                      {item}
+                    {({ selected, active }) => (
+                      <>
+                        <span
+                          className={`block truncate ${
+                            selected ? 'font-medium' : 'font-normal'
+                          }`}
+                        >
+                          {item}
+                        </span>
+                        {selected ? (
+                          <span
+                            className={`absolute inset-y-0 left-0 flex items-center pl-3 ${
+                              active ? 'text-white' : 'text-teal-600'
+                            }`}
+                          >
+                            <CheckIcon className="h-5 w-5" aria-hidden="true" />
+                          </span>
+                        ) : null}
+                      </>
+                    )}
                     </Combobox.Option>
                   ))}
             </Combobox.Options>
