@@ -9,11 +9,11 @@ const Footer = () => {
         <div className="flex max-md:flex-col flex-wrap
         justigy-between gap-5 sm:px16 px6 py-10">
             <div className="flex flex-col justify-start items-start
-            gap-6">
+            gap-6 px-16">
                 <Image src="/logo.svg" alt="logo"
                 width={118} height={18} className="object-contain"/>
 
-                <p className="text-base text-gray-700">
+                <p className="text-base text-gray-700 ">
                     CarHub 2024 <br/>
                     All rights reserved &copy;
                 </p>
