@@ -24,6 +24,13 @@ const Hero = () => {
             text-white rounded-full mt-16"
             handleClick={handleScroll}
             />
+
+        </div>
+
+        <div className="hero__image-container">
+            <div className="hero__image">
+                <Image src="" />
+            </div>
         </div>
     </div>
   )
